@@ -3,7 +3,7 @@ var first = 0
 var second = 0
 var zim = false
 func _ready() -> void:
-	velocity = Vector2(10, 10).normalized() * 200
+	velocity = Vector2(10, 10).normalized() * 200 a
 
 func _physics_process(delta: float) -> void:
 	var collide = move_and_collide(velocity * delta)
