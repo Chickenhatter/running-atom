@@ -11,11 +11,11 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(collide.get_normal())
 	if zim == true:
 		$"../../../Character/Node2D/main_hydrogen".global_position = $CollisionPolygon2D/Node2D.global_position
-		$"../../../Character/Node2D/main_hydrogen".look_at($connect_o_1.global_position)
+		$"../../../Character/Node2D/main_hydrogen".look_at($connect_o_3.global_position)
 	$CollisionPolygon2D.rotation_degrees += 5
 
 
-func _on_connect_o_1_area_entered(area: Area2D) -> void:
+func _on_connect_o_3_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
 			global.finner = 'n'
