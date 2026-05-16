@@ -2,15 +2,27 @@
 
 [ext_resource type="Script" uid="uid://cpuq2uefwh1nu" path="res://character_body_2d.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://ny7ljme4s3em" path="res://icon.svg" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://beb403u6nbh73" path="res://assets/circle/red_circle.png" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://dqy07nx4m7tuu" path="res://connectors.gd" id="3_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bveyqa0cr8tev" path="res://assets/circle/white_circle.png" id="3_d21ai"]
 [ext_resource type="Script" uid="uid://bjfxy066fkxo" path="res://f_1.gd" id="4_q6r6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
 radius = 46.09772
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wtcfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kdubu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+radius = 44.217136
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 143.51393
@@ -156,6 +168,7 @@ sources/0 = SubResource("TileSetAtlasSource_0hol4")
 
 [node name="Node2D" type="Node2D" parent="Node2D/Character" unique_id=1681493110]
 position = Vector2(430, 353)
+rotation = 4.071853
 
 [node name="main_hydrogen" type="CharacterBody2D" parent="Node2D/Character/Node2D" unique_id=1102833672]
 position = Vector2(0, 1)
@@ -165,6 +178,7 @@ script = ExtResource("1_wtcfe")
 shape = SubResource("CircleShape2D_y32ns")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=1697919531]
+scale = Vector2(0.17, 0.17)
 sprite_frames = SubResource("SpriteFrames_wtcfe")
 
 [node name="Node2D" type="Node2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=869958952]
@@ -173,17 +187,13 @@ sprite_frames = SubResource("SpriteFrames_wtcfe")
 rotation = 0.15009831
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" unique_id=634452675]
-position = Vector2(-69, 0)
+position = Vector2(75.49831, -2.54068)
 shape = SubResource("CircleShape2D_0e48y")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" unique_id=179231709]
-position = Vector2(-67.5, 2)
-scale = Vector2(0.19531249, 0.18749999)
-texture = ExtResource("2_0e48y")
-
-[node name="Icon" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=725865592]
-position = Vector2(0, -4)
-texture = ExtResource("2_0e48y")
+position = Vector2(73.263016, -2.6005855)
+scale = Vector2(0.1, 0.096)
+texture = ExtResource("3_d21ai")
 
 [node name="Connectors" type="Node2D" parent="Node2D" unique_id=1218859279]
 script = ExtResource("3_0hol4")
@@ -196,7 +206,8 @@ script = ExtResource("4_q6r6c")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1" unique_id=1519733348]
 position = Vector2(3, 0)
-texture = ExtResource("2_0e48y")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
 
 [node name="connect_f_1" type="Area2D" parent="Node2D/Connectors/Node2D/F1" unique_id=518679061]
 
@@ -209,16 +220,53 @@ shape = SubResource("CircleShape2D_0hol4")
 polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
 
 [node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1382937650]
-position = Vector2(-34, -100)
+visible = false
+position = Vector2(-73, -208)
 texture = ExtResource("2_0e48y")
 
 [node name="Node2D" type="Node2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1947695938]
-position = Vector2(-32.999996, -98.99999)
+position = Vector2(-58, -187)
 scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1929426558]
+position = Vector2(38.999996, 115)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1370508325]
+position = Vector2(-63, 102)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=329485258]
+position = Vector2(-116.99999, 24.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1530719949]
+position = Vector2(119.00001, 37)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1314015704]
+position = Vector2(118.99999, -47.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=299161339]
+position = Vector2(38.999996, -112.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1792868590]
+position = Vector2(-101.99999, -69.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=2090561590]
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Node2D" unique_id=1648343213]
+visible = false
 position = Vector2(1, 1)
 texture = ExtResource("2_0e48y")
 
@@ -232,4 +280,5 @@ tile_set = SubResource("TileSet_q6r6c")
 position = Vector2(430, 354)
 zoom = Vector2(0.4, 0.4)
 
+[connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Character/Node2D/main_hydrogen" method="_on_hydrogen_main_area_entered"]
 [connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Connectors/Node2D/F1" method="_on_hydrogen_main_area_entered"]
