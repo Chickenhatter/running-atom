@@ -5,7 +5,7 @@ extends Node2D
 func _ready() -> void:
 	if global.connector == 'F':
 		$Node2D/RichTextLabel.text = 'Hydrogen fluoride'
-	if global.connector == 'F':
+	if global.connector == 'O':
 		$Node2D/RichTextLabel.text = 'Hydroxide'
 
 

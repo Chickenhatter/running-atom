@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dt1pk01p5kap8" path="res://cl_2.gd" id="15_ta5nu"]
 [ext_resource type="Script" uid="uid://daf8gmfjsnqlb" path="res://cl_3.gd" id="16_k73cj"]
 [ext_resource type="Script" uid="uid://bwgb2f14egm2o" path="res://cl_4.gd" id="17_rjqkl"]
+[ext_resource type="Script" uid="uid://doi100r3yy0ws" path="res://h_1.gd" id="18_rjqkl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
 radius = 46.09772
@@ -978,7 +979,7 @@ position = Vector2(-125.347404, -140.99394)
 
 [node name="H1" type="CharacterBody2D" parent="Node2D/Connectors/Hydrogen" unique_id=1320943646]
 position = Vector2(112, -51)
-script = ExtResource("14_d2bti")
+script = ExtResource("18_rjqkl")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Hydrogen/H1" unique_id=729072282]
 position = Vector2(-0.9999995, 1.9999998)
@@ -986,13 +987,26 @@ scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_kdubu")
 
 [node name="connect_h_1" type="Area2D" parent="Node2D/Connectors/Hydrogen/H1" unique_id=1204676540]
+rotation = -6.1086526
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Hydrogen/H1/connect_h_1" unique_id=425471510]
 scale = Vector2(1.38, 1.38)
 polygon = PackedVector2Array(-10.869568, -33.333332, -30.434784, -35.507244, -31.159424, -58.695652, -7.246376, -61.594204)
 
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Hydrogen/H1/connect_h_1" unique_id=1494756153]
+position = Vector2(-87.217026, -166.38266)
+rotation = -0.03490658
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Hydrogen/H1/connect_h_1" unique_id=1092651955]
+position = Vector2(-29.183434, -62.089134)
+rotation = -0.03490658
+scale = Vector2(0.099000014, 0.099000014)
+texture = ExtResource("3_d21ai")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Hydrogen/H1" unique_id=683629020]
 position = Vector2(-2, 0)
+rotation = 0.51487213
 scale = Vector2(0.33, 0.33)
 shape = SubResource("CircleShape2D_0hol4")
 
@@ -1023,4 +1037,4 @@ polygon = PackedVector2Array(-194.40004, -97.34999, -192.10004, -94.72499, -189.
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl1/connect_cl_1" to="Node2D/Connectors/Chlorine/Cl1" method="_on_connect_cl_1_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl2/connect_cl_2" to="Node2D/Connectors/Chlorine/Cl2" method="_on_connect_cl_2_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl4/connect_cl_4" to="Node2D/Connectors/Chlorine/Cl4" method="_on_connect_cl_4_area_entered"]
-[connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_cl_1_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_h_1_area_entered"]

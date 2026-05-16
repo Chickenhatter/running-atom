@@ -20,7 +20,8 @@ func _physics_process(_delta: float) -> void:
 		bonding = true
 		$Node2D/hydrogen_main.rotation_degrees = 0
 		await get_tree().create_timer(3.0).timeout
-		get_tree().change_scene_to_file('res://ending_scene.tscn')
+		if global.connector != 'H':
+			get_tree().change_scene_to_file('res://ending_scene.tscn')
 	if bonding == false:
 		$"../Camera2D".position = $".".position
 		$Node2D/hydrogen_main.rotation_degrees += 3
