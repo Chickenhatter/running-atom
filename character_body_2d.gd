@@ -25,5 +25,13 @@ func _physics_process(_delta: float) -> void:
 	if bonding == false:
 		$"../Camera2D".position = $".".position
 		$Node2D/hydrogen_main.rotation_degrees += 3
+	elif global.connector == 'H':
+		$"../Camera2D".position = $".".position
 	velocity = movement * 200
 	move_and_slide()
+	if global.black == true:
+		if $black.self_modulate.a <= 0.01:
+			$black.self_modulate.a = 0.01
+		$black.self_modulate.a += 0.01
+	elif $black.self_modulate.a > 0:
+			$black.self_modulate.a -= 0.01
