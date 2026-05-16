@@ -1,0 +1,26 @@
+extends CharacterBody2D
+var first = 0
+var second = 0
+var zim = false
+func _ready() -> void:
+	velocity = Vector2(10, 10).normalized() * 200
+
+func _physics_process(delta: float) -> void:
+	$CollisionPolygon2D/V1.rotation_degrees -= 8
+	var collide = move_and_collide(velocity * delta)
+	if collide:
+		velocity = velocity.bounce(collide.get_normal())
+	if zim == true:
+		$"../../../Character/Node2D/main_hydrogen".global_position = $CollisionPolygon2D/V2/Node2D.global_position
+		$"../../../Character/Node2D/main_hydrogen".look_at($connect_cl_4.global_position)
+	$CollisionPolygon2D.rotation_degrees += 5
+
+
+func _on_connect_cl_4_area_entered(area: Area2D) -> void:
+	if area.name == 'hydrogen_main':
+		if first == 0:
+			global.finner = 'n'
+			global.connector = 'Cl'
+			$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
+			zim = true
+			$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $CollisionPolygon2D.rotation_degrees
