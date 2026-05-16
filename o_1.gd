@@ -15,8 +15,8 @@ func _physics_process(delta: float) -> void:
 	$CollisionPolygon2D.rotation_degrees += 5
 
 
-func _on_hydrogen_main_area_entered(area: Area2D) -> void:
-	if area.name == 'connect_f_1':
+func _on_connect_o_1_area_entered(area: Area2D) -> void:
+	if area.name == 'hydrogen_main':
 		if first == 0:
 			global.finner = 'n'
 			global.connector = 'F'

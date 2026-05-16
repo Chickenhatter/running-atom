@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://dqy07nx4m7tuu" path="res://connectors.gd" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bveyqa0cr8tev" path="res://assets/circle/white_circle.png" id="3_d21ai"]
 [ext_resource type="Script" uid="uid://bjfxy066fkxo" path="res://f_1.gd" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://d2delp23owhw3" path="res://f_2.gd" id="7_d21ai"]
+[ext_resource type="Script" uid="uid://brd7iqm7dox3g" path="res://f_3.gd" id="8_4d7sh"]
+[ext_resource type="Script" uid="uid://clqkis545e3ym" path="res://f_4.gd" id="9_ir8iy"]
+[ext_resource type="Script" uid="uid://cdyl1ual4x15f" path="res://o_1.gd" id="10_ir8iy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
 radius = 46.09772
@@ -198,77 +202,324 @@ texture = ExtResource("3_d21ai")
 [node name="Connectors" type="Node2D" parent="Node2D" unique_id=1218859279]
 script = ExtResource("3_0hol4")
 
-[node name="Node2D" type="Node2D" parent="Node2D/Connectors" unique_id=454169797]
+[node name="Florine" type="Node2D" parent="Node2D/Connectors" unique_id=454169797]
 
-[node name="F1" type="CharacterBody2D" parent="Node2D/Connectors/Node2D" unique_id=1146912998]
+[node name="F1" type="CharacterBody2D" parent="Node2D/Connectors/Florine" unique_id=1146912998]
 position = Vector2(1, -1)
 script = ExtResource("4_q6r6c")
 
-[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1" unique_id=1519733348]
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Florine/F1" unique_id=1519733348]
 position = Vector2(3, 0)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_kdubu")
 
-[node name="connect_f_1" type="Area2D" parent="Node2D/Connectors/Node2D/F1" unique_id=518679061]
+[node name="connect_f_1" type="Area2D" parent="Node2D/Connectors/Florine/F1" unique_id=518679061]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Node2D/F1/connect_f_1" unique_id=1817401342]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Florine/F1/connect_f_1" unique_id=1817401342]
 position = Vector2(1, 0)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_0hol4")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Node2D/F1" unique_id=1106979729]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Florine/F1" unique_id=1106979729]
 polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
 
-[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1382937650]
+[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1382937650]
 visible = false
 position = Vector2(-73, -208)
 texture = ExtResource("2_0e48y")
 
-[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1947695938]
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1947695938]
 position = Vector2(-58, -187)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1929426558]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1929426558]
 position = Vector2(38.999996, 115)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1370508325]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1370508325]
 position = Vector2(-63, 102)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=329485258]
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=329485258]
 position = Vector2(-116.99999, 24.999998)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1530719949]
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1530719949]
 position = Vector2(119.00001, 37)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1314015704]
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1314015704]
 position = Vector2(118.99999, -47.999985)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=299161339]
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=299161339]
 position = Vector2(38.999996, -112.999985)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Node2D/F1/CollisionPolygon2D" unique_id=1792868590]
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Florine/F1/CollisionPolygon2D" unique_id=1792868590]
+position = Vector2(-101.99999, -69.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="F2" type="CharacterBody2D" parent="Node2D/Connectors/Florine" unique_id=568857542]
+position = Vector2(884, -28)
+rotation = 1.2322024
+script = ExtResource("7_d21ai")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Florine/F2" unique_id=1644652869]
+position = Vector2(3, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
+
+[node name="connect_f_2" type="Area2D" parent="Node2D/Connectors/Florine/F2" unique_id=106525049]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Florine/F2/connect_f_2" unique_id=305167251]
+position = Vector2(1, 0)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Florine/F2" unique_id=591693231]
+polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
+
+[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=1958373228]
+visible = false
+position = Vector2(-73, -208)
+texture = ExtResource("2_0e48y")
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=126238147]
+position = Vector2(-58, -187)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=123796060]
+position = Vector2(38.999996, 115)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=1793669111]
+position = Vector2(-63, 102)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=1124130992]
+position = Vector2(-116.99999, 24.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=680202876]
+position = Vector2(119.00001, 37)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=175258947]
+position = Vector2(118.99999, -47.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=8048959]
+position = Vector2(38.999996, -112.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Florine/F2/CollisionPolygon2D" unique_id=818702036]
+position = Vector2(-101.99999, -69.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="F3" type="CharacterBody2D" parent="Node2D/Connectors/Florine" unique_id=1623408056]
+position = Vector2(826, 496)
+rotation = -1.4748032
+script = ExtResource("8_4d7sh")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Florine/F3" unique_id=675692141]
+position = Vector2(3, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
+
+[node name="connect_f_3" type="Area2D" parent="Node2D/Connectors/Florine/F3" unique_id=2132307523]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Florine/F3/connect_f_3" unique_id=1483959098]
+position = Vector2(1, 0)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Florine/F3" unique_id=541857185]
+polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
+
+[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=1660912299]
+visible = false
+position = Vector2(-73, -208)
+texture = ExtResource("2_0e48y")
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=116182856]
+position = Vector2(-58, -187)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=764122731]
+position = Vector2(38.999996, 115)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=690711740]
+position = Vector2(-63, 102)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=661415347]
+position = Vector2(-116.99999, 24.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=1899237324]
+position = Vector2(119.00001, 37)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=774824670]
+position = Vector2(118.99999, -47.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=1401549398]
+position = Vector2(38.999996, -112.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Florine/F3/CollisionPolygon2D" unique_id=435762167]
+position = Vector2(-101.99999, -69.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="F4" type="CharacterBody2D" parent="Node2D/Connectors/Florine" unique_id=1777977355]
+position = Vector2(60, 569)
+rotation = 2.586578
+script = ExtResource("9_ir8iy")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Florine/F4" unique_id=608768190]
+position = Vector2(3, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
+
+[node name="connect_f_4" type="Area2D" parent="Node2D/Connectors/Florine/F4" unique_id=1350344987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Florine/F4/connect_f_4" unique_id=412312501]
+position = Vector2(1, 0)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Florine/F4" unique_id=1527171549]
+polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=1205996636]
+position = Vector2(-58, -187)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=210711935]
+position = Vector2(38.999996, 115)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=908579003]
+position = Vector2(-63, 102)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=711012146]
+position = Vector2(-116.99999, 24.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=564741614]
+position = Vector2(119.00001, 37)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=1765403637]
+position = Vector2(118.99999, -47.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=874127139]
+position = Vector2(38.999996, -112.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Florine/F4/CollisionPolygon2D" unique_id=491235756]
+position = Vector2(-101.99999, -69.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Oxygen" type="Node2D" parent="Node2D/Connectors" unique_id=2134948157]
+
+[node name="O1" type="CharacterBody2D" parent="Node2D/Connectors/Oxygen" unique_id=957781985]
+position = Vector2(1, -1)
+script = ExtResource("10_ir8iy")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1" unique_id=1801987296]
+position = Vector2(3, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
+
+[node name="connect_f_1" type="Area2D" parent="Node2D/Connectors/Oxygen/O1" unique_id=61872692]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Oxygen/O1/connect_f_1" unique_id=1583237041]
+position = Vector2(1, 0)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Oxygen/O1" unique_id=2334035]
+polygon = PackedVector2Array(0, -145, 40, -139, 74, -124, 104, -99, 126, -74, 140, -36, 145, -1, 139, 40, 124, 74, 102, 104, 72, 125, 38, 139, 0, 144, -37, 138, -72, 124, -101, 100, -124, 74, -138, 36, -139, -21, -126, -68, -98, -106, -37, 15, 44, -22)
+
+[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=1670242780]
+visible = false
+position = Vector2(-73, -208)
+texture = ExtResource("2_0e48y")
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=475872557]
+position = Vector2(-58, -187)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=392109253]
+position = Vector2(38.999996, 115)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=362779935]
+position = Vector2(-63, 102)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=1425091310]
+position = Vector2(-116.99999, 24.999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=1917332944]
+position = Vector2(119.00001, 37)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=1425883663]
+position = Vector2(118.99999, -47.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=660269283]
+position = Vector2(38.999996, -112.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Oxygen/O1/CollisionPolygon2D" unique_id=832615440]
 position = Vector2(-101.99999, -69.999985)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_d21ai")
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=2090561590]
-
-[node name="Icon" type="Sprite2D" parent="Node2D/Node2D" unique_id=1648343213]
-visible = false
-position = Vector2(1, 1)
-texture = ExtResource("2_0e48y")
 
 [node name="tileset" type="Node2D" parent="Node2D" unique_id=1549839648]
 
@@ -281,4 +532,7 @@ position = Vector2(430, 354)
 zoom = Vector2(0.4, 0.4)
 
 [connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Character/Node2D/main_hydrogen" method="_on_hydrogen_main_area_entered"]
-[connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Connectors/Node2D/F1" method="_on_hydrogen_main_area_entered"]
+[connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Connectors/Florine/F1" method="_on_hydrogen_main_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Florine/F2/connect_f_2" to="Node2D/Connectors/Florine/F2" method="_on_connect_f_2_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Florine/F3/connect_f_3" to="Node2D/Connectors/Florine/F3" method="_on_connect_f_3_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Florine/F4/connect_f_4" to="Node2D/Connectors/Florine/F4" method="_on_connect_f_4_area_entered"]

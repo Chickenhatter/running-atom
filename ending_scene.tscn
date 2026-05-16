@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://r1roqd18tac7"]
+
+[ext_resource type="Script" uid="uid://klajbakd05kh" path="res://ending_scene.gd" id="1_wo5jl"]
+
+[node name="ending_scene" type="Node2D" unique_id=593366593]
+script = ExtResource("1_wo5jl")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=341363948]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D" unique_id=466969784]
+offset_left = -129.0
+offset_top = -94.0
+offset_right = 124.0
+offset_bottom = 103.0
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1020957784]
+zoom = Vector2(2, 2)
