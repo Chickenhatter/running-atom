@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://r1roqd18tac7"]
 
 [ext_resource type="Script" uid="uid://klajbakd05kh" path="res://ending_scene.gd" id="1_wo5jl"]
+[ext_resource type="Texture2D" uid="uid://w62bg0q7iwln" path="res://assets/map/pure-black-background-py9pa0f1mlsscm9s.png" id="2_4l4mv"]
 
 [node name="ending_scene" type="Node2D" unique_id=593366593]
 script = ExtResource("1_wo5jl")
@@ -8,10 +9,16 @@ script = ExtResource("1_wo5jl")
 [node name="Node2D" type="Node2D" parent="." unique_id=341363948]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D" unique_id=466969784]
-offset_left = -129.0
-offset_top = -94.0
-offset_right = 124.0
-offset_bottom = 103.0
+offset_left = -123.0
+offset_top = -45.0
+offset_right = 130.0
+offset_bottom = 152.0
+text = "Hydrogen fluoride is a highly corrosive gas but this is the incorrect experiment, please go again"
+horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1020957784]
-zoom = Vector2(2, 2)
+zoom = Vector2(3.5, 3.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1301078361]
+position = Vector2(0, 4)
+texture = ExtResource("2_4l4mv")

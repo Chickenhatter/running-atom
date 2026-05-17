@@ -9,12 +9,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$Node2D.global_position.x = $"../Character/Node2D/main_hydrogen".global_position.x
+	if global.connector == 'H':
+		$"../map/CharacterBody2D".position.x = 10000
 
 
 func _on_flame_body_entered(body: Node2D) -> void:
 	if body.name == 'main_hydrogen':
-		$"../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
+		$"../Character/Node2D/main_hydrogen/black".self_modulate.a = 0.5
 		global.black = true
+		await get_tree().create_timer(2.0).timeout
+		get_tree().change_scene_to_file('res://ending_scene.tscn')
 
 
 func _on_left_area_entered(area: Area2D) -> void:

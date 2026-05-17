@@ -1,25 +1,35 @@
 extends CharacterBody2D
-
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
+var first = 0
+var second = 0
+var zim = false
+var vim = false
+func _ready() -> void:
+	velocity = Vector2(10, 10).normalized() * 200
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	if vim == false:
+		var collide = move_and_collide(velocity * delta)
+		if collide:
+			velocity = velocity.bounce(collide.get_normal())
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+		if global.ace == 'left':
+			$".".position.x += 10
+		if global.ace == 'right':
+			$".".position.x -= 10
+		#$".".position.y -= 1
+		var _collide = move_and_collide(velocity * delta)
+		velocity += get_gravity() * delta * (-1)
+	if zim == true:
+		$"../../../Character/Node2D/main_hydrogen".global_position = $connect_h_2/Node2D.global_position
+		$"../../../Character/Node2D/main_hydrogen".look_at($connect_h_2.global_position)
+	$connect_h_2.rotation_degrees += 5
+func _on_connect_h_2_area_entered(area: Area2D) -> void:
+	if area.name == 'hydrogen_main':
+		if first == 0:
+			if global.connector != 'H':
+				global.finner = 'n'
+				global.connector = 'H'
+				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
+				zim = true
+				vim = true
+				$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $connect_h_2.rotation_degrees

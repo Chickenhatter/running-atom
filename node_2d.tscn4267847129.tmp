@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bveyqa0cr8tev" path="res://assets/circle/white_circle.png" id="3_d21ai"]
 [ext_resource type="Texture2D" uid="uid://w62bg0q7iwln" path="res://assets/map/pure-black-background-py9pa0f1mlsscm9s.png" id="4_7vxoj"]
 [ext_resource type="Script" uid="uid://bjfxy066fkxo" path="res://f_1.gd" id="4_q6r6c"]
-[ext_resource type="Texture2D" uid="uid://bndo2fd6dc2rf" path="res://assets/map/background.png" id="5_2nhjh"]
 [ext_resource type="Script" uid="uid://d2delp23owhw3" path="res://f_2.gd" id="7_d21ai"]
 [ext_resource type="Script" uid="uid://brd7iqm7dox3g" path="res://f_3.gd" id="8_4d7sh"]
 [ext_resource type="Script" uid="uid://clqkis545e3ym" path="res://f_4.gd" id="9_ir8iy"]
@@ -46,7 +45,7 @@ radius = 44.217136
 radius = 143.51393
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhjh"]
-size = Vector2(3237, 283)
+size = Vector2(3237, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vxoj"]
 size = Vector2(1023, 583)
@@ -75,11 +74,11 @@ size = Vector2(4024, 1476)
 [node name="Character" type="Node2D" parent="Node2D" unique_id=1932164760]
 
 [node name="Node2D" type="Node2D" parent="Node2D/Character" unique_id=1681493110]
-position = Vector2(1814.0002, -1359.0002)
+position = Vector2(741.00006, -497.00006)
 rotation = 4.071853
 
 [node name="main_hydrogen" type="CharacterBody2D" parent="Node2D/Character/Node2D" unique_id=1102833672]
-position = Vector2(-3.6478043e-05, -6.842613e-05)
+position = Vector2(-1541.4865, 1052.3757)
 script = ExtResource("1_wtcfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=1111563257]
@@ -104,6 +103,7 @@ scale = Vector2(0.1, 0.096)
 texture = ExtResource("3_d21ai")
 
 [node name="black" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=179011961]
+visible = false
 z_index = 11
 position = Vector2(-109.08594, -97.276855)
 scale = Vector2(10.314499, 9.748305)
@@ -114,20 +114,6 @@ position = Vector2(-0.80181885, -0.59765625)
 rotation = 2.211332
 scale = Vector2(1.0000002, 1.0000002)
 zoom = Vector2(0.4, 0.4)
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Character/Node2D" unique_id=1483349924]
-z_index = -4096
-position = Vector2(58.538757, -1234.7793)
-rotation = -4.071853
-scale = Vector2(8, 8)
-texture = ExtResource("5_2nhjh")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Character/Node2D" unique_id=1861010997]
-z_index = -4096
-position = Vector2(10136.009, 6462.5723)
-rotation = -0.93898714
-scale = Vector2(9.331028, 27.962862)
-texture = ExtResource("5_2nhjh")
 
 [node name="Connectors" type="Node2D" parent="Node2D" unique_id=1218859279]
 script = ExtResource("3_0hol4")
@@ -1108,10 +1094,10 @@ texture = ExtResource("14_nr8wp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/map/Sprite2D/CharacterBody2D" unique_id=44048069]
 polygon = PackedVector2Array(-194.40004, -97.34999, -192.10004, -94.72499, -189.80005, -22.275002, -254.37503, 106.2, -251.42505, 111.42499, -209.15004, 119.29999, -172.10004, 120.95, -126.55005, 118.97499, -95.750046, 117.325, -65.92505, 113.72499, -59.375046, 106.2, -67.22505, 90.774994, -96.40005, 26.224997, -119.350044, -22.95, -124.600044, -96.67499, -121.65005, -98.649994, -125.57504, -102.575, -128.20004, -96.024994, -124.600044, -22.625, -65.27505, 102.249985, -65.60005, 107.17499, -67.55005, 109.47499, -74.77505, 112.42499, -92.80005, 115.374985, -111.15005, 116.67499, -136.37505, 118.325, -161.62505, 118.97499, -183.57504, 119.29999, -199.00005, 118.325, -226.85004, 114.72499, -243.90004, 112.09999, -249.80005, 109.47499, -250.77504, 104.22499, -246.85004, 101.59999, -185.55005, -21.95, -187.85004, -95.04999, -190.47504, -101.274994)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/map" unique_id=706106286]
+[node name="Area2D" type="Area2D" parent="Node2D/map" unique_id=1996504806]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/map/CharacterBody2D" unique_id=700969225]
-position = Vector2(828.5, -2103.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/map/Area2D" unique_id=700969225]
+position = Vector2(828.5, -1972)
 shape = SubResource("RectangleShape2D_2nhjh")
 
 [node name="squeaky pop" type="Node2D" parent="Node2D" unique_id=1970489263]
