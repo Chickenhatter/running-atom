@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://beb403u6nbh73" path="res://assets/circle/red_circle.png" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://dqy07nx4m7tuu" path="res://connectors.gd" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bveyqa0cr8tev" path="res://assets/circle/white_circle.png" id="3_d21ai"]
+[ext_resource type="Texture2D" uid="uid://w62bg0q7iwln" path="res://assets/map/pure-black-background-py9pa0f1mlsscm9s.png" id="4_7vxoj"]
 [ext_resource type="Script" uid="uid://bjfxy066fkxo" path="res://f_1.gd" id="4_q6r6c"]
 [ext_resource type="Script" uid="uid://d2delp23owhw3" path="res://f_2.gd" id="7_d21ai"]
 [ext_resource type="Script" uid="uid://brd7iqm7dox3g" path="res://f_3.gd" id="8_4d7sh"]
@@ -20,6 +21,7 @@
 [ext_resource type="Script" uid="uid://bwgb2f14egm2o" path="res://cl_4.gd" id="17_rjqkl"]
 [ext_resource type="Script" uid="uid://doi100r3yy0ws" path="res://h_1.gd" id="18_rjqkl"]
 [ext_resource type="Script" uid="uid://cb41wf22ij6wt" path="res://squeaky_pop.gd" id="20_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://cr855s2bael4n" path="res://assets/New folder/matchstick.png" id="22_ei405"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
 radius = 46.09772
@@ -48,12 +50,18 @@ size = Vector2(1023, 583)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kdubu")
+"texture": ExtResource("22_ei405")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei405"]
+size = Vector2(2379.5, 1967)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8dv2"]
+size = Vector2(4024, 1476)
 
 [node name="Node2D" type="Node2D" unique_id=1242583264]
 
@@ -66,7 +74,7 @@ position = Vector2(741.00006, -497.00006)
 rotation = 4.071853
 
 [node name="main_hydrogen" type="CharacterBody2D" parent="Node2D/Character/Node2D" unique_id=1102833672]
-position = Vector2(0, 1)
+position = Vector2(-1541.4865, 1052.3757)
 script = ExtResource("1_wtcfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=1111563257]
@@ -91,9 +99,10 @@ scale = Vector2(0.1, 0.096)
 texture = ExtResource("3_d21ai")
 
 [node name="black" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=179011961]
+z_index = 11
 position = Vector2(-109.08594, -97.276855)
 scale = Vector2(10.314499, 9.748305)
-texture = ExtResource("2_kdubu")
+texture = ExtResource("4_7vxoj")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Character/Node2D" unique_id=1728883502]
 position = Vector2(-0.80181885, -0.59765625)
@@ -998,7 +1007,7 @@ position = Vector2(-125.347404, -140.99394)
 [node name="Hydrogen" type="Node2D" parent="Node2D/Connectors" unique_id=1369731772]
 
 [node name="H1" type="CharacterBody2D" parent="Node2D/Connectors/Hydrogen" unique_id=1320943646]
-position = Vector2(112, -51)
+position = Vector2(2698, 247)
 script = ExtResource("18_rjqkl")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Hydrogen/H1" unique_id=729072282]
@@ -1033,17 +1042,17 @@ shape = SubResource("CircleShape2D_0hol4")
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=2090561590]
 
-[node name="tileset" type="Node2D" parent="Node2D" unique_id=1549839648]
+[node name="map" type="Node2D" parent="Node2D" unique_id=1549839648]
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/tileset" unique_id=1984754422]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/map" unique_id=1984754422]
 z_index = -10
 position = Vector2(5281, -2008)
 scale = Vector2(30, 30)
 texture = ExtResource("14_nr8wp")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/tileset/Sprite2D" unique_id=2036079750]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/map/Sprite2D" unique_id=2036079750]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/tileset/Sprite2D/CharacterBody2D" unique_id=44048069]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/map/Sprite2D/CharacterBody2D" unique_id=44048069]
 polygon = PackedVector2Array(-194.40004, -97.34999, -192.10004, -94.72499, -189.80005, -22.275002, -254.37503, 106.2, -251.42505, 111.42499, -209.15004, 119.29999, -172.10004, 120.95, -126.55005, 118.97499, -95.750046, 117.325, -65.92505, 113.72499, -59.375046, 106.2, -67.22505, 90.774994, -96.40005, 26.224997, -119.350044, -22.95, -124.600044, -96.67499, -121.65005, -98.649994, -125.57504, -102.575, -128.20004, -96.024994, -124.600044, -22.625, -65.27505, 102.249985, -65.60005, 107.17499, -67.55005, 109.47499, -74.77505, 112.42499, -92.80005, 115.374985, -111.15005, 116.67499, -136.37505, 118.325, -161.62505, 118.97499, -183.57504, 119.29999, -199.00005, 118.325, -226.85004, 114.72499, -243.90004, 112.09999, -249.80005, 109.47499, -250.77504, 104.22499, -246.85004, 101.59999, -185.55005, -21.95, -187.85004, -95.04999, -190.47504, -101.274994)
 
 [node name="squeaky pop" type="Node2D" parent="Node2D" unique_id=1970489263]
@@ -1059,13 +1068,25 @@ shape = SubResource("RectangleShape2D_7vxoj")
 position = Vector2(544, -6121)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/squeaky pop/Node2D" unique_id=647952449]
+position = Vector2(522, 414.00018)
+scale = Vector2(4.455975, 4.4311223)
 sprite_frames = SubResource("SpriteFrames_ei405")
 
 [node name="Node2D2" type="Node2D" parent="Node2D/squeaky pop" unique_id=901505451]
 
 [node name="left" type="Area2D" parent="Node2D/squeaky pop/Node2D2" unique_id=1263221772]
+position = Vector2(422, -56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/squeaky pop/Node2D2/left" unique_id=1835228804]
+position = Vector2(-1633, -5891)
+shape = SubResource("RectangleShape2D_ei405")
 
 [node name="right" type="Area2D" parent="Node2D/squeaky pop/Node2D2" unique_id=1191699264]
+position = Vector2(-478, -28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/squeaky pop/Node2D2/right" unique_id=1944759985]
+position = Vector2(3480, -5794)
+shape = SubResource("RectangleShape2D_e8dv2")
 
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=1731740073]
 position = Vector2(561, -37)
@@ -1084,3 +1105,7 @@ position = Vector2(561, -37)
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl4/connect_cl_4" to="Node2D/Connectors/Chlorine/Cl4" method="_on_connect_cl_4_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_h_1_area_entered"]
 [connection signal="body_entered" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_body_entered"]
+[connection signal="area_entered" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_entered"]
+[connection signal="area_exited" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_exited"]
+[connection signal="area_entered" from="Node2D/squeaky pop/Node2D2/right" to="Node2D/squeaky pop" method="_on_right_area_entered"]
+[connection signal="area_exited" from="Node2D/squeaky pop/Node2D2/right" to="Node2D/squeaky pop" method="_on_right_area_exited"]

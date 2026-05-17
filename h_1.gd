@@ -11,12 +11,12 @@ func _physics_process(delta: float) -> void:
 		var collide = move_and_collide(velocity * delta)
 		if collide:
 			velocity = velocity.bounce(collide.get_normal())
-			if global.ace == 'left':
-				$".".position.x -= 1
-			if global.ace == 'right':
-				$".".position.x += 1
-			$".".position.y -= 1
 	else:
+		if global.ace == 'left':
+			$".".position.x += 10
+		if global.ace == 'right':
+			$".".position.x -= 10
+		#$".".position.y -= 1
 		var _collide = move_and_collide(velocity * delta)
 		velocity += get_gravity() * delta * (-1)
 	if zim == true:
@@ -26,9 +26,10 @@ func _physics_process(delta: float) -> void:
 func _on_connect_h_1_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
-			global.finner = 'n'
-			global.connector = 'H'
-			$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
-			zim = true
-			vim = true
-			$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $connect_h_1.rotation_degrees
+			if global.connector != 'H':
+				global.finner = 'n'
+				global.connector = 'H'
+				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
+				zim = true
+				vim = true
+				$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $connect_h_1.rotation_degrees

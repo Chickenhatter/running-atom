@@ -9,17 +9,27 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$Node2D.global_position.x = $"../Character/Node2D/main_hydrogen".global_position.x
-	
 
 
 func _on_flame_body_entered(body: Node2D) -> void:
 	if body.name == 'main_hydrogen':
+		$"../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
 		global.black = true
 
 
 func _on_left_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	global.ace = 'left'
 
 
 func _on_right_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	global.ace = 'right'
+
+
+func _on_left_area_exited(area: Area2D) -> void:
+	if area is Area2D:
+		global.ace = 'centre'
+
+
+func _on_right_area_exited(area: Area2D) -> void:
+	if area is Area2D:
+		global.ace = 'centre'

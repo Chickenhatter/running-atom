@@ -18,8 +18,11 @@ func _physics_process(delta: float) -> void:
 func _on_connect_f_4_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
-			global.finner = 'n'
-			global.connector = 'F'
-			$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
-			zim = true
-			$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $CollisionPolygon2D.rotation_degrees
+			if global.connector != 'H':
+				$"../../../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
+				global.black = true
+				global.finner = 'n'
+				global.connector = 'F'
+				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
+				zim = true
+				$"../../../Character/Node2D/main_hydrogen".rotation_degrees = $CollisionPolygon2D.rotation_degrees
