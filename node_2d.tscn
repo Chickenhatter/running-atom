@@ -24,7 +24,8 @@
 [ext_resource type="Script" uid="uid://cgeihtr2jlywx" path="res://h_2.gd" id="20_e8dv2"]
 [ext_resource type="Script" uid="uid://cb41wf22ij6wt" path="res://squeaky_pop.gd" id="20_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://cr855s2bael4n" path="res://assets/New folder/matchstick.png" id="22_ei405"]
-[ext_resource type="AudioStream" uid="uid://cbxemoaj3ueat" path="res://assets/sound/Smoke Detector Beep Sound Effect.mp3" id="24_bjha6"]
+[ext_resource type="Script" uid="uid://dmy44ye0i8w4n" path="res://nh_31.gd" id="22_gt76g"]
+[ext_resource type="AudioStream" uid="uid://b7ps48oeln43y" path="res://assets/sound/The Deep Blue Sea.mp3" id="24_bjha6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
 radius = 46.09772
@@ -45,6 +46,9 @@ radius = 44.217136
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 143.51393
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gt76g"]
+radius = 294.08
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhjh"]
 size = Vector2(3237, 283)
@@ -105,6 +109,7 @@ scale = Vector2(0.1, 0.096)
 texture = ExtResource("3_d21ai")
 
 [node name="black" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=179011961]
+visible = false
 z_index = 11
 position = Vector2(-109.08594, -97.276855)
 scale = Vector2(10.314499, 9.748305)
@@ -1094,6 +1099,86 @@ rotation = 0.51487213
 scale = Vector2(0.33, 0.33)
 shape = SubResource("CircleShape2D_0hol4")
 
+[node name="Ammonium" type="Node2D" parent="Node2D/Connectors" unique_id=1154588086]
+
+[node name="NH31" type="CharacterBody2D" parent="Node2D/Connectors/Ammonium" unique_id=501021477]
+position = Vector2(589, -1565)
+script = ExtResource("22_gt76g")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=1321635767]
+position = Vector2(-0.9999995, 1.9999998)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kdubu")
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/Icon" unique_id=539871990]
+position = Vector2(2.857174, -542.85724)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kdubu")
+
+[node name="Icon2" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/Icon" unique_id=306650554]
+position = Vector2(3.1232834e-05, 571.4284)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kdubu")
+
+[node name="Icon3" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/Icon" unique_id=626863546]
+position = Vector2(-562.85706, 17.1427)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kdubu")
+
+[node name="connect_nh_31" type="Area2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=1382822552]
+rotation = -6.1086526
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Ammonium/NH31/connect_nh_31" unique_id=1437379833]
+position = Vector2(-74.245705, -133.12991)
+rotation = -0.03490658
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Ammonium/NH31/connect_nh_31" unique_id=217767936]
+polygon = PackedVector2Array(-39.184906, -233.7467, -62.93692, -224.48145, -78.17526, -201.48596, -79.74292, -175.82397, -65.032715, -149.98572, -41.573364, -137.87549, -31.668213, -133.52942, -109.82013, -87.25549, -120.19156, -71.21069, -140.4802, 26.801392, -159.07257, 7.7403564, -179.57748, -4.890869, -206.05072, -5.300171, -227.3121, 6.5721436, -239.30588, 24.933838, -241.04718, 49.611084, -233.63498, 68.61267, -220.19736, 81.47461, -202.5303, 89.529175, -183.47168, 88.19946, -168.23569, 82.4668, -157.80719, 72.504395, -150.50674, 62.07849, -146.04416, 47.07556, -132.43048, 43.659668, -78.682495, 112.37024, 13.998749, 142.73767, -4.6579285, 169.3822, -13.52359, 188.20764, -14.510773, 205.64404, -4.2607727, 229.22229, 17.576263, 243.64954, 42.427185, 246.37573, 68.438995, 232.65027, 79.44791, 214.46228, 81.53653, 191.75464, 73.95065, 171.76831, 59.354584, 158.0951, 39.544342, 149.40295, 34.158783, 136.13672, 112.25363, 83.78027, 116.94937, 58.58203, 104.032715, 48.67444, 85.38083, 40.79358, -18.19281, 23.51648, -6.0728455, -68.99353, 87.71466, -78.42273, 93.45221, -97.71216, 81.46332, -113.875854, 63.853333, -115.8479, -14.752838, -135.49658, 2.3385925, -153.7417, 12.710022, -169.7865, 15.31958, -189.53967, 8.544922, -210.68445, -2.9230957, -223.8938, -16.477264, -231.65808, -28.00473, -233.68726)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=123529931]
+position = Vector2(-2, 0)
+rotation = 0.51487213
+scale = Vector2(0.33, 0.33)
+shape = SubResource("CircleShape2D_gt76g")
+
+[node name="white" type="Node2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=1233695364]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=377678126]
+position = Vector2(-2, -118.00003)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=1757004389]
+position = Vector2(-123, 5.9999695)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=41297737]
+position = Vector2(-2, 123.99997)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=1440364300]
+position = Vector2(-87, -86.00003)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=220214098]
+position = Vector2(-77, 91.99997)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=803556826]
+position = Vector2(83, 84.99997)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Connectors/Ammonium/NH31/white" unique_id=144947558]
+position = Vector2(86, -81.00003)
+scale = Vector2(0.09949986, 0.09750013)
+texture = ExtResource("3_d21ai")
+
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=2090561590]
 
 [node name="map" type="Node2D" parent="Node2D" unique_id=1549839648]
@@ -1124,9 +1209,8 @@ script = ExtResource("20_fs4d3")
 position = Vector2(511, -6147)
 shape = SubResource("RectangleShape2D_7vxoj")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/squeaky pop/flame" unique_id=1075059667]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/squeaky pop/flame" unique_id=1854836262]
 stream = ExtResource("24_bjha6")
-pitch_scale = 0.66
 
 [node name="Node2D" type="Node2D" parent="Node2D/squeaky pop" unique_id=1522380716]
 position = Vector2(544, -6121)
@@ -1169,6 +1253,7 @@ position = Vector2(561, -37)
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl4/connect_cl_4" to="Node2D/Connectors/Chlorine/Cl4" method="_on_connect_cl_4_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_h_1_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H2/connect_h_2" to="Node2D/Connectors/Hydrogen/H2" method="_on_connect_h_2_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Ammonium/NH31/connect_nh_31" to="Node2D/Connectors/Ammonium/NH31" method="_on_connect_h_2_area_entered"]
 [connection signal="body_entered" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_body_entered"]
 [connection signal="area_entered" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_entered"]
 [connection signal="area_exited" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_exited"]

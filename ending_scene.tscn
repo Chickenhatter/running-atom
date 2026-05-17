@@ -9,14 +9,6 @@ script = ExtResource("1_wo5jl")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=341363948]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D" unique_id=466969784]
-offset_left = -135.0
-offset_top = -58.0
-offset_right = 130.0
-offset_bottom = 54.0
-text = "Hydrogen fluoride is a highly corrosive gas but this is the incorrect experiment, please go again"
-horizontal_alignment = 1
-
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1020957784]
 zoom = Vector2(3.5, 3.5)
 
@@ -24,6 +16,15 @@ zoom = Vector2(3.5, 3.5)
 position = Vector2(0, 7.9999995)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_ayyxh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D" unique_id=466969784]
+offset_left = -135.0
+offset_top = -58.0
+offset_right = 130.0
+offset_bottom = 54.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Hydrogen fluoride is a highly corrosive gas but this is the incorrect experiment, please go again"
+horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1301078361]
 position = Vector2(0, 4)
