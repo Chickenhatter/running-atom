@@ -17,7 +17,9 @@ func _on_flame_body_entered(body: Node2D) -> void:
 	if body.name == 'main_hydrogen':
 		$"../Character/Node2D/main_hydrogen/black".self_modulate.a = 0.5
 		global.black = true
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
+		$flame/AudioStreamPlayer2D.play()
+		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file('res://ending_scene.tscn')
 
 

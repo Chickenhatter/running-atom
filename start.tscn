@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dwlt7j2hqdyh6"]
+
+[ext_resource type="Texture2D" uid="uid://bndo2fd6dc2rf" path="res://assets/map/background.png" id="1_qn1rc"]
+[ext_resource type="Texture2D" uid="uid://clbrdj1powara" path="res://assets/map/the map.png" id="2_1n0d2"]
+[ext_resource type="Texture2D" uid="uid://w62bg0q7iwln" path="res://assets/map/pure-black-background-py9pa0f1mlsscm9s.png" id="3_y5hus"]
+[ext_resource type="Script" uid="uid://blf0u30v17ea" path="res://the_opening.gd" id="4_oiuna"]
+[ext_resource type="AudioStream" uid="uid://b7ps48oeln43y" path="res://assets/sound/The Deep Blue Sea.mp3" id="5_oiuna"]
+[ext_resource type="AudioStream" uid="uid://7t0rgponifw6" path="res://assets/sound/Phone Vibration sound effect.mp3" id="6_4a3qj"]
+
+[node name="Node2D" type="Node2D" unique_id=280354614]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2054025583]
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=321271950]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D" unique_id=639424322]
+texture = ExtResource("1_qn1rc")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/Node2D" unique_id=1420274065]
+scale = Vector2(0.9, 0.9)
+zoom = Vector2(1.2, 1.2)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Node2D" unique_id=328071202]
+position = Vector2(-100, 208)
+scale = Vector2(0.24842767, 0.30612245)
+texture = ExtResource("2_1n0d2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Node2D" unique_id=1410482796]
+position = Vector2(80.999985, 208)
+scale = Vector2(0.24842767, 0.30612245)
+texture = ExtResource("2_1n0d2")
+
+[node name="black" type="Sprite2D" parent="Node2D/Node2D" unique_id=1144455339]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_y5hus")
+
+[node name="Node2D2" type="Node2D" parent="Node2D" unique_id=1939695685]
+script = ExtResource("4_oiuna")
+
+[node name="Button" type="Button" parent="Node2D/Node2D2" unique_id=82445386]
+offset_left = -40.0
+offset_top = -210.0
+offset_right = 26.0
+offset_bottom = -144.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/Node2D2" unique_id=1356535483]
+stream = ExtResource("5_oiuna")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Node2D/Node2D2" unique_id=1178429483]
+stream = ExtResource("6_4a3qj")
+parameters/looping = false
+
+[connection signal="pressed" from="Node2D/Node2D2/Button" to="Node2D/Node2D2" method="_on_button_pressed"]
