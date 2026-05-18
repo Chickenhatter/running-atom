@@ -27,6 +27,7 @@ func _on_connect_h_1_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
 			if global.connector != 'H':
+				global.h = true
 				global.finner = 'n'
 				global.connector = 'H'
 				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)

@@ -48,7 +48,7 @@ radius = 44.217136
 radius = 143.51393
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gt76g"]
-radius = 294.08
+radius = 378.12082
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhjh"]
 size = Vector2(3237, 283)
@@ -78,6 +78,7 @@ size = Vector2(4024, 1476)
 [node name="Node2D" type="Node2D" parent="." unique_id=1618221303]
 
 [node name="Character" type="Node2D" parent="Node2D" unique_id=1932164760]
+position = Vector2(-976, -147)
 
 [node name="Node2D" type="Node2D" parent="Node2D/Character" unique_id=1681493110]
 position = Vector2(1814.0002, -1359.0002)
@@ -120,13 +121,6 @@ position = Vector2(-0.80181885, -0.59765625)
 rotation = 2.211332
 scale = Vector2(1.0000002, 1.0000002)
 zoom = Vector2(0.4, 0.4)
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Character/Node2D" unique_id=1483349924]
-z_index = -4096
-position = Vector2(58.538757, -1234.7793)
-rotation = -4.071853
-scale = Vector2(8, 8)
-texture = ExtResource("5_2nhjh")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Node2D/Character/Node2D" unique_id=1861010997]
 z_index = -4096
@@ -1133,13 +1127,10 @@ position = Vector2(-74.245705, -133.12991)
 rotation = -0.03490658
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Ammonium/NH31/connect_nh_31" unique_id=217767936]
-polygon = PackedVector2Array(-39.184906, -233.7467, -62.93692, -224.48145, -78.17526, -201.48596, -79.74292, -175.82397, -65.032715, -149.98572, -41.573364, -137.87549, -31.668213, -133.52942, -109.82013, -87.25549, -120.19156, -71.21069, -140.4802, 26.801392, -159.07257, 7.7403564, -179.57748, -4.890869, -206.05072, -5.300171, -227.3121, 6.5721436, -239.30588, 24.933838, -241.04718, 49.611084, -233.63498, 68.61267, -220.19736, 81.47461, -202.5303, 89.529175, -183.47168, 88.19946, -168.23569, 82.4668, -157.80719, 72.504395, -150.50674, 62.07849, -146.04416, 47.07556, -132.43048, 43.659668, -78.682495, 112.37024, 13.998749, 142.73767, -4.6579285, 169.3822, -13.52359, 188.20764, -14.510773, 205.64404, -4.2607727, 229.22229, 17.576263, 243.64954, 42.427185, 246.37573, 68.438995, 232.65027, 79.44791, 214.46228, 81.53653, 191.75464, 73.95065, 171.76831, 59.354584, 158.0951, 39.544342, 149.40295, 34.158783, 136.13672, 112.25363, 83.78027, 116.94937, 58.58203, 104.032715, 48.67444, 85.38083, 40.79358, -18.19281, 23.51648, -6.0728455, -68.99353, 87.71466, -78.42273, 93.45221, -97.71216, 81.46332, -113.875854, 63.853333, -115.8479, -14.752838, -135.49658, 2.3385925, -153.7417, 12.710022, -169.7865, 15.31958, -189.53967, 8.544922, -210.68445, -2.9230957, -223.8938, -16.477264, -231.65808, -28.00473, -233.68726)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=123529931]
-position = Vector2(-2, 0)
-rotation = 0.51487213
-scale = Vector2(0.33, 0.33)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Connectors/Ammonium/NH31/connect_nh_31" unique_id=123529931]
+position = Vector2(-1.9696045, 0.34729004)
+rotation = 0.34033942
+scale = Vector2(0.32999998, 0.32999998)
 shape = SubResource("CircleShape2D_gt76g")
 
 [node name="white" type="Node2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=1233695364]
@@ -1178,6 +1169,13 @@ texture = ExtResource("3_d21ai")
 position = Vector2(86, -81.00003)
 scale = Vector2(0.09949986, 0.09750013)
 texture = ExtResource("3_d21ai")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Connectors/Ammonium/NH31" unique_id=217767936]
+rotation = 0.17453271
+polygon = PackedVector2Array(-39.184906, -233.7467, -62.93692, -224.48145, -78.17526, -201.48596, -79.74292, -175.82397, -65.032715, -149.98572, -41.573364, -137.87549, -31.668213, -133.52942, -109.82013, -87.25549, -120.19156, -71.21069, -140.4802, 26.801392, -159.07257, 7.7403564, -179.57748, -4.890869, -206.05072, -5.300171, -227.3121, 6.5721436, -239.30588, 24.933838, -241.04718, 49.611084, -233.63498, 68.61267, -220.19736, 81.47461, -202.5303, 89.529175, -183.47168, 88.19946, -168.23569, 82.4668, -157.80719, 72.504395, -150.50674, 62.07849, -146.04416, 47.07556, -132.43048, 43.659668, -78.682495, 112.37024, 13.998749, 142.73767, -4.6579285, 169.3822, -13.52359, 188.20764, -14.510773, 205.64404, -4.2607727, 229.22229, 17.576263, 243.64954, 42.427185, 246.37573, 68.438995, 232.65027, 79.44791, 214.46228, 81.53653, 191.75464, 73.95065, 171.76831, 59.354584, 158.0951, 39.544342, 149.40295, 34.158783, 136.13672, 112.25363, 83.78027, 116.94937, 58.58203, 104.032715, 48.67444, 85.38083, 40.79358, -18.19281, 23.51648, -6.0728455, -68.99353, 87.71466, -78.42273, 93.45221, -97.71216, 81.46332, -113.875854, 63.853333, -115.8479, -14.752838, -135.49658, 2.3385925, -153.7417, 12.710022, -169.7865, 15.31958, -189.53967, 8.544922, -210.68445, -2.9230957, -223.8938, -16.477264, -231.65808, -28.00473, -233.68726)
+
+[node name="Node2D" type="Node2D" parent="Node2D/Connectors/Ammonium/NH31/CollisionPolygon2D" unique_id=624919352]
+position = Vector2(176.16403, -25.985298)
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=2090561590]
 
@@ -1239,6 +1237,12 @@ shape = SubResource("RectangleShape2D_e8dv2")
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=1731740073]
 position = Vector2(561, -37)
 
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1483349924]
+z_index = -4096
+position = Vector2(789.0001, -668.00006)
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("5_2nhjh")
+
 [connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Character/Node2D/main_hydrogen" method="_on_hydrogen_main_area_entered"]
 [connection signal="area_entered" from="Node2D/Character/Node2D/main_hydrogen/Node2D/hydrogen_main" to="Node2D/Connectors/Florine/F1" method="_on_hydrogen_main_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Florine/F2/connect_f_2" to="Node2D/Connectors/Florine/F2" method="_on_connect_f_2_area_entered"]
@@ -1253,7 +1257,7 @@ position = Vector2(561, -37)
 [connection signal="area_entered" from="Node2D/Connectors/Chlorine/Cl4/connect_cl_4" to="Node2D/Connectors/Chlorine/Cl4" method="_on_connect_cl_4_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_h_1_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H2/connect_h_2" to="Node2D/Connectors/Hydrogen/H2" method="_on_connect_h_2_area_entered"]
-[connection signal="area_entered" from="Node2D/Connectors/Ammonium/NH31/connect_nh_31" to="Node2D/Connectors/Ammonium/NH31" method="_on_connect_h_2_area_entered"]
+[connection signal="area_entered" from="Node2D/Connectors/Ammonium/NH31/connect_nh_31" to="Node2D/Connectors/Ammonium/NH31" method="_on_connect_nh_31_area_entered"]
 [connection signal="body_entered" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_body_entered"]
 [connection signal="area_entered" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_entered"]
 [connection signal="area_exited" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_exited"]

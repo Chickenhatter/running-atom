@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 func _on_connect_h_2_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
+			global.h = true
 			if global.connector != 'H':
 				global.finner = 'n'
 				global.connector = 'H'

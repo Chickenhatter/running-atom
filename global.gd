@@ -6,6 +6,12 @@ var connector = ''
 var black = false
 var ace = 'centre'
 
+
+var cl = false
+var o = false
+var n = false
+var h = false
+var f = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

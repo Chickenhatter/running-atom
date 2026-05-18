@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 		$"../../../Character/Node2D/main_hydrogen".global_position = $CollisionPolygon2D/Node2D.global_position
 		$"../../../Character/Node2D/main_hydrogen".look_at($connect_nh_31.global_position)
 	$".".rotation_degrees += 5
-func _on_connect_o_1_area_entered(area: Area2D) -> void:
+func _on_connect_nh_31_area_entered(area: Area2D) -> void:
 	if area.name == 'hydrogen_main':
 		if first == 0:
 			if global.connector != 'H':

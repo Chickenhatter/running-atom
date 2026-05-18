@@ -15,6 +15,10 @@ func _ready() -> void:
 		$Node2D/RichTextLabel.text = 'Hydrocloric Acid is one of the most commonly used inorganic acids used in a lab but this is the incorrect experiment, please go again'
 		await get_tree().create_timer(4.0).timeout
 		get_tree().change_scene_to_file("res://node_2d.tscn")
+	if global.connector == 'NH3':
+		$Node2D/RichTextLabel.text = 'Ammonium is a poisonous substance that is used by many organisms for nitrogen but this is the incorrect experiment, please go again'
+		await get_tree().create_timer(4.0).timeout
+		get_tree().change_scene_to_file("res://node_2d.tscn")
 	if global.connector == 'H':
 		$Node2D/RichTextLabel.text = 'Hydrogen gas is used in an experiment with fire to cause a squeaky pop, congradulations on completing the correct experiment'
 		await get_tree().create_timer(4.0).timeout

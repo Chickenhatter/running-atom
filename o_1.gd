@@ -21,6 +21,7 @@ func _on_connect_o_1_area_entered(area: Area2D) -> void:
 			if global.connector != 'H':
 				$"../../../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
 				global.black = true
+				global.o = true
 				global.finner = 'n'
 				global.connector = 'O'
 				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)

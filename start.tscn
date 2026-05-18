@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://ccivjqiylpwbx" path="res://blare.gd" id="7_gophc"]
 [ext_resource type="Texture2D" uid="uid://b2p0d8jvhmieq" path="res://assets/New folder/Screenshot 2026-05-17 230242.png" id="8_p0nl4"]
 [ext_resource type="Texture2D" uid="uid://b307guel3pwux" path="res://assets/New folder/Screenshot 2026-05-17 230401.png" id="9_da165"]
+[ext_resource type="Texture2D" uid="uid://beb403u6nbh73" path="res://assets/circle/red_circle.png" id="10_da165"]
+[ext_resource type="Script" uid="uid://dxic4fyko0qwr" path="res://chem.gd" id="10_r8ukj"]
+[ext_resource type="Texture2D" uid="uid://bveyqa0cr8tev" path="res://assets/circle/white_circle.png" id="11_r8ukj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8ukj"]
 animations = [{
@@ -45,6 +48,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwiky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_da165")
+}],
+"loop": true,
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -107,5 +121,304 @@ scale = Vector2(0.4624506, 0.44951934)
 sprite_frames = SubResource("SpriteFrames_1colc")
 animation = &"new_animation"
 autoplay = "default"
+
+[node name="Chem" type="Node2D" parent="Node2D" unique_id=2079954459]
+script = ExtResource("10_r8ukj")
+
+[node name="Cl" type="Node2D" parent="Node2D/Chem" unique_id=1168013610]
+
+[node name="Cl" type="Node2D" parent="Node2D/Chem/Cl" unique_id=1371960333]
+position = Vector2(-51, 206.00002)
+rotation = 0.42062435
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=978898514]
+position = Vector2(-410, -187)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=35356728]
+position = Vector2(-389, -233)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=502313987]
+position = Vector2(-422, -220)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1806842866]
+position = Vector2(-376, -201)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1056036239]
+position = Vector2(-408, -234)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=2144748942]
+position = Vector2(-423, -200)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=994926897]
+position = Vector2(-389, -188)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=58937604]
+position = Vector2(-375, -220)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="red" type="AnimatedSprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1559128054]
+position = Vector2(-399, -210)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="red3" type="AnimatedSprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1884875868]
+position = Vector2(-365, -224)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1400487874]
+position = Vector2(-399, -192)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=565026759]
+position = Vector2(-399, -228)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=428222505]
+position = Vector2(-417, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=89356129]
+position = Vector2(-381, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=673703741]
+position = Vector2(-412, -223)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1409473067]
+position = Vector2(-412, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=2041667860]
+position = Vector2(-386, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Node2D/Chem/Cl/Cl" unique_id=1093841665]
+position = Vector2(-386, -222)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="O" type="Node2D" parent="Node2D/Chem" unique_id=368981015]
+
+[node name="O" type="Node2D" parent="Node2D/Chem/O" unique_id=2010056238]
+position = Vector2(213, -21)
+
+[node name="red" type="AnimatedSprite2D" parent="Node2D/Chem/O/O" unique_id=1313471223]
+position = Vector2(-399, -210)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=1738826213]
+position = Vector2(-399, -192)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=1923834849]
+position = Vector2(-399, -228)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=487126156]
+position = Vector2(-381, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=1569566780]
+position = Vector2(-412, -223)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=1621157643]
+position = Vector2(-412, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=445105539]
+position = Vector2(-386, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Chem/O/O" unique_id=1483631896]
+position = Vector2(-386, -222)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="red2" type="AnimatedSprite2D" parent="Node2D/Chem/O/O" unique_id=496591359]
+position = Vector2(-370, -209)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="N" type="Node2D" parent="Node2D/Chem" unique_id=1014933677]
+
+[node name="F" type="Node2D" parent="Node2D/Chem/N" unique_id=1278397137]
+position = Vector2(661, 414)
+
+[node name="red" type="AnimatedSprite2D" parent="Node2D/Chem/N/F" unique_id=1384441222]
+position = Vector2(-399, -210)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=574849566]
+position = Vector2(-399, -192)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=10686815]
+position = Vector2(-399, -228)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=1355603831]
+position = Vector2(-417, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=263241125]
+position = Vector2(-381, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=13282713]
+position = Vector2(-412, -223)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=1260869621]
+position = Vector2(-412, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=717895727]
+position = Vector2(-386, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Chem/N/F" unique_id=1104444735]
+position = Vector2(-386, -222)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="red2" type="AnimatedSprite2D" parent="Node2D/Chem/N/F" unique_id=1019658757]
+position = Vector2(-370, -209)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="red3" type="AnimatedSprite2D" parent="Node2D/Chem/N/F" unique_id=1663598905]
+position = Vector2(-399, -239)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="red4" type="AnimatedSprite2D" parent="Node2D/Chem/N/F" unique_id=1194215294]
+position = Vector2(-428, -210)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="red5" type="AnimatedSprite2D" parent="Node2D/Chem/N/F" unique_id=205005606]
+position = Vector2(-399, -181)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="H" type="Node2D" parent="Node2D/Chem" unique_id=1716243449]
+
+[node name="H" type="Node2D" parent="Node2D/Chem/H" unique_id=2129645347]
+position = Vector2(522, 30)
+
+[node name="red2" type="AnimatedSprite2D" parent="Node2D/Chem/H/H" unique_id=617502307]
+position = Vector2(-196, -207)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="red3" type="AnimatedSprite2D" parent="Node2D/Chem/H/H" unique_id=1840969564]
+position = Vector2(-174, -207)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Chem/H/H" unique_id=124651316]
+position = Vector2(-185, -211)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node2D/Chem/H/H" unique_id=864429765]
+position = Vector2(-185, -202)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="F" type="Node2D" parent="Node2D/Chem" unique_id=745433716]
+
+[node name="F" type="Node2D" parent="Node2D/Chem/F" unique_id=1382121108]
+position = Vector2(789, 443)
+
+[node name="red" type="AnimatedSprite2D" parent="Node2D/Chem/F/F" unique_id=1060621538]
+position = Vector2(-399, -210)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_hwiky")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=1763088649]
+position = Vector2(-399, -192)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=1307808437]
+position = Vector2(-399, -228)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=1703991585]
+position = Vector2(-417, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=533575775]
+position = Vector2(-381, -210)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=781674077]
+position = Vector2(-412, -223)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=867390038]
+position = Vector2(-412, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=1428951532]
+position = Vector2(-386, -198)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D/Chem/F/F" unique_id=1840879520]
+position = Vector2(-386, -222)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("11_r8ukj")
+
+[node name="red2" type="AnimatedSprite2D" parent="Node2D/Chem/F/F" unique_id=1996852620]
+position = Vector2(-370, -209)
+scale = Vector2(0.025, 0.025)
+sprite_frames = SubResource("SpriteFrames_hwiky")
 
 [connection signal="pressed" from="Node2D/Node2D2/Button" to="Node2D/Node2D2" method="_on_button_pressed"]
