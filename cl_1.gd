@@ -3,7 +3,7 @@ var first = 0
 var second = 0
 var zim = false
 func _ready() -> void:
-	velocity = Vector2(10, 10).normalized() * 200
+	velocity = Vector2(10, 0).normalized() * 200
 
 func _physics_process(delta: float) -> void:
 	$CollisionPolygon2D/V1.rotation_degrees -= 8
@@ -22,6 +22,7 @@ func _on_connect_cl_1_area_entered(area: Area2D) -> void:
 			if global.connector != 'H':
 				$"../../../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
 				global.black = true
+				global.cl = true
 				global.finner = 'n'
 				global.connector = 'Cl'
 				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)

@@ -126,6 +126,7 @@ autoplay = "default"
 script = ExtResource("10_r8ukj")
 
 [node name="Cl" type="Node2D" parent="Node2D/Chem" unique_id=1168013610]
+position = Vector2(-252, -320)
 
 [node name="Cl" type="Node2D" parent="Node2D/Chem/Cl" unique_id=1371960333]
 position = Vector2(-51, 206.00002)
@@ -222,6 +223,7 @@ scale = Vector2(0.02, 0.02)
 texture = ExtResource("11_r8ukj")
 
 [node name="O" type="Node2D" parent="Node2D/Chem" unique_id=368981015]
+position = Vector2(-384, -262)
 
 [node name="O" type="Node2D" parent="Node2D/Chem/O" unique_id=2010056238]
 position = Vector2(213, -21)
@@ -272,6 +274,7 @@ scale = Vector2(0.025, 0.025)
 sprite_frames = SubResource("SpriteFrames_hwiky")
 
 [node name="N" type="Node2D" parent="Node2D/Chem" unique_id=1014933677]
+position = Vector2(-845, -668)
 
 [node name="F" type="Node2D" parent="Node2D/Chem/N" unique_id=1278397137]
 position = Vector2(661, 414)
@@ -342,6 +345,7 @@ scale = Vector2(0.025, 0.025)
 sprite_frames = SubResource("SpriteFrames_hwiky")
 
 [node name="H" type="Node2D" parent="Node2D/Chem" unique_id=1716243449]
+position = Vector2(-931, -304)
 
 [node name="H" type="Node2D" parent="Node2D/Chem/H" unique_id=2129645347]
 position = Vector2(522, 30)
@@ -367,6 +371,7 @@ scale = Vector2(0.02, 0.02)
 texture = ExtResource("11_r8ukj")
 
 [node name="F" type="Node2D" parent="Node2D/Chem" unique_id=745433716]
+position = Vector2(-980, -699)
 
 [node name="F" type="Node2D" parent="Node2D/Chem/F" unique_id=1382121108]
 position = Vector2(789, 443)

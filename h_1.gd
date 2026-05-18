@@ -16,7 +16,6 @@ func _physics_process(delta: float) -> void:
 			$".".position.x += 10
 		if global.ace == 'right':
 			$".".position.x -= 10
-		#$".".position.y -= 1
 		var _collide = move_and_collide(velocity * delta)
 		velocity += get_gravity() * delta * (-1)
 	if zim == true:

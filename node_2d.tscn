@@ -54,7 +54,7 @@ radius = 378.12082
 size = Vector2(3237, 283)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vxoj"]
-size = Vector2(1023, 583)
+size = Vector2(923, 583)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ei405"]
 animations = [{
@@ -68,10 +68,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ei405"]
-size = Vector2(2379.5, 1967)
+size = Vector2(4780.75, 19206.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8dv2"]
-size = Vector2(4024, 1476)
+size = Vector2(4024, 14229)
 
 [node name="Node2D" type="Node2D" unique_id=1242583264]
 
@@ -110,7 +110,6 @@ scale = Vector2(0.1, 0.096)
 texture = ExtResource("3_d21ai")
 
 [node name="black" type="Sprite2D" parent="Node2D/Character/Node2D/main_hydrogen" unique_id=179011961]
-visible = false
 z_index = 11
 position = Vector2(-109.08594, -97.276855)
 scale = Vector2(10.314499, 9.748305)
@@ -601,7 +600,7 @@ texture = ExtResource("3_d21ai")
 [node name="Chlorine" type="Node2D" parent="Node2D/Connectors" unique_id=2082829288]
 
 [node name="Cl1" type="CharacterBody2D" parent="Node2D/Connectors/Chlorine" unique_id=183551704]
-position = Vector2(-523, -139)
+position = Vector2(1071, 92)
 script = ExtResource("14_d2bti")
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Connectors/Chlorine/Cl1" unique_id=767515016]
@@ -1204,7 +1203,7 @@ script = ExtResource("20_fs4d3")
 [node name="flame" type="Area2D" parent="Node2D/squeaky pop" unique_id=109384755]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/squeaky pop/flame" unique_id=736041643]
-position = Vector2(511, -6147)
+position = Vector2(482.5, -6147)
 shape = SubResource("RectangleShape2D_7vxoj")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/squeaky pop/flame" unique_id=1854836262]
@@ -1224,14 +1223,14 @@ sprite_frames = SubResource("SpriteFrames_ei405")
 position = Vector2(422, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/squeaky pop/Node2D2/left" unique_id=1835228804]
-position = Vector2(-1633, -5891)
+position = Vector2(-2833.625, 2728.75)
 shape = SubResource("RectangleShape2D_ei405")
 
 [node name="right" type="Area2D" parent="Node2D/squeaky pop/Node2D2" unique_id=1191699264]
 position = Vector2(-478, -28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/squeaky pop/Node2D2/right" unique_id=1944759985]
-position = Vector2(3480, -5794)
+position = Vector2(3480, 582.5)
 shape = SubResource("RectangleShape2D_e8dv2")
 
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=1731740073]
@@ -1258,6 +1257,8 @@ texture = ExtResource("5_2nhjh")
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H1/connect_h_1" to="Node2D/Connectors/Hydrogen/H1" method="_on_connect_h_1_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Hydrogen/H2/connect_h_2" to="Node2D/Connectors/Hydrogen/H2" method="_on_connect_h_2_area_entered"]
 [connection signal="area_entered" from="Node2D/Connectors/Ammonium/NH31/connect_nh_31" to="Node2D/Connectors/Ammonium/NH31" method="_on_connect_nh_31_area_entered"]
+[connection signal="area_entered" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_area_entered"]
+[connection signal="area_exited" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_area_exited"]
 [connection signal="body_entered" from="Node2D/squeaky pop/flame" to="Node2D/squeaky pop" method="_on_flame_body_entered"]
 [connection signal="area_entered" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_entered"]
 [connection signal="area_exited" from="Node2D/squeaky pop/Node2D2/left" to="Node2D/squeaky pop" method="_on_left_area_exited"]

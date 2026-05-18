@@ -19,6 +19,7 @@ func _on_connect_nh_31_area_entered(area: Area2D) -> void:
 			if global.connector != 'H':
 				$"../../../Character/Node2D/main_hydrogen/black".self_modulate.a = 0
 				global.black = true
+				global.n = true
 				global.finner = 'n'
 				global.connector = 'NH3'
 				$"../../../Character/Node2D/main_hydrogen".position = Vector2(0,0)
